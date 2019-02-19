@@ -1,3 +1,14 @@
+variable "name_prefix_g" {
+  description = "unique part of the name to give to resources"
+}
+
+variable "channel_g" {
+  description = "describe channel of product"
+}
+
+variable "rg_name" {
+  description = "describe channel of product"
+}
 variable "location" {
   description = "The location/region where the virtual network is created. Changing this forces a new resource to be created."
 }

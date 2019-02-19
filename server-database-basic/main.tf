@@ -1,9 +1,8 @@
 
-
 resource "azurerm_sql_server" "sdb" {
-  name = "${var.location_g}-sdb-${var.name_prefix_g}-${var.channel_g}"
-  resource_group_name = "${azurerm_resource_group.rg.name}"
-  location = "${var.location_g}"
+  name = "${var.location}-sdb-${var.name_prefix_g}-${var.channel_g}"
+  resource_group_name = "${var.rg_name}"
+  location = "${var.location}"
   version = "12.0"
   administrator_login = "${var.admin_username_db}"
   administrator_login_password = "${var.admin_password_db}"
@@ -12,3 +11,4 @@ resource "azurerm_sql_server" "sdb" {
     environment = "${var.name_prefix_g}"
   }
 }
+

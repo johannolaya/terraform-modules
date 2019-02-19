@@ -10,5 +10,3 @@ locals {
 terraform {
   backend "azurerm" {}
 }
-
-
