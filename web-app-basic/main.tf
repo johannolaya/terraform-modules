@@ -32,10 +32,6 @@ resource "azurerm_app_service" "app" {
     value = "${var.connection_string}"
   }
 
-  depends_on = [
-    "azurerm_sql_database.db",
-    "azurerm_storage_account.sa",
-    "azurerm_application_insights.app_ins"]
 }
 
 terraform {
