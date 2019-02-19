@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be270f05-ea13-4569-962f-724c5d9e045f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/server-database-basic/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/server-database-basic/main.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-database-basic/outputs.tf" beforeDir="false" afterPath="$PROJECT_DIR$/server-database-basic/outputs.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app-basic/outputs.tf" beforeDir="false" afterPath="$PROJECT_DIR$/web-app-basic/outputs.tf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server-database-basic/main.tf">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="1" selection-start-column="1" selection-end-column="1" />
+            <state relative-caret-position="300">
+              <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -37,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web-app-basic/outputs.tf">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret selection-end-line="2" selection-end-column="1" />
+              <caret column="25" selection-start-column="25" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -49,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server-database-basic/outputs.tf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="60">
+              <caret line="4" column="30" lean-forward="true" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -82,16 +83,16 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/server-database-basic/variables.tf" />
-        <option value="$PROJECT_DIR$/web-app-basic/outputs.tf" />
-        <option value="$PROJECT_DIR$/server-database-basic/outputs.tf" />
         <option value="$PROJECT_DIR$/web-app-basic/variables.tf" />
         <option value="$PROJECT_DIR$/web-app-basic/main.tf" />
         <option value="$PROJECT_DIR$/server-database-basic/main.tf" />
+        <option value="$PROJECT_DIR$/server-database-basic/outputs.tf" />
+        <option value="$PROJECT_DIR$/web-app-basic/outputs.tf" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="4">
-    <option name="x" value="2591" />
+    <option name="x" value="2588" />
     <option name="y" value="32" />
     <option name="width" value="1010" />
     <option name="height" value="1048" />
@@ -132,7 +133,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550595250182" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550603848090" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -161,7 +162,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2591" y="32" width="1010" height="1048" extended-state="4" />
+    <frame x="2588" y="32" width="1010" height="1048" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2448347" />
@@ -212,20 +213,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server-database-basic/outputs.tf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-app-basic/outputs.tf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web-app-basic/variables.tf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
@@ -242,8 +229,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server-database-basic/main.tf">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-database-basic/outputs.tf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="30" lean-forward="true" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-app-basic/outputs.tf">
+      <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
+          <caret column="25" selection-start-column="25" selection-end-column="25" />
         </state>
       </provider>
     </entry>

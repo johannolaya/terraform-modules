@@ -1,4 +1,4 @@
-output "service_plan_name " {
+output "service_plan_name" {
   value = "${azurerm_app_service_plan.sp.name}"
 }
 
