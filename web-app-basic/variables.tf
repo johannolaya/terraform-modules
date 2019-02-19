@@ -33,3 +33,20 @@ variable "app_services_settings" {
 variable "app_services_slot_settings" {
   type = "map"
 }
+
+variable "connection_string" {
+  description = "string conection database principal"
+}
+
+variable "instrumentation_key_app" {
+  description = "string conection database principal"
+}
+
+variable "client_secret" {
+  description = "string conection database principal"
+}
+
+variable "client_id" {
+  description = "string conection database principal"
+}
+
