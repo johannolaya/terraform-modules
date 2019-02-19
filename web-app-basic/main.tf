@@ -1,10 +1,12 @@
-resource "azurerm_resource_group" "rg" {
-  name = "${var.location_g}-${var.name_prefix_g}-rg-${var.channel_g}"
-  location = "${var.location_g}"
-}
+resource "azurerm_app_service_plan" "sp" {
+  name = "${var.location_g}-sp-${var.name_prefix_g}-${var.channel_g}"
+  location = "${var.location}"
+  resource_group_name = "${var.rg_name}"
 
-locals {
-  resourcegroup = "${var.location_g}-app-${var.name_prefix_g}-${var.channel_g}"
+  sku {
+    tier = "${var.tier_sp}"
+    size = "${var.size_sp}"
+  }
 }
 
 terraform {
