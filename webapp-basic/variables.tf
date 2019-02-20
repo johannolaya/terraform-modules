@@ -17,9 +17,11 @@ variable "sp_size" {
 }
 
 variable "app_settings" {
+  type = "map"
 }
 
 variable "app_settings_slot" {
+  type = "map"
 }
 
 variable "db_connection_app_base" {
