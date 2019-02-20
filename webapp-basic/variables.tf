@@ -22,10 +22,10 @@ variable "app_settings" {
 variable "app_settings_slot" {
 }
 
-variable "db_connection_base" {
+variable "db_connection_app_base" {
 }
 
-variable "db_connection_slot" {
+variable "db_connection_app_slot" {
 }
 
 variable "client_id" {

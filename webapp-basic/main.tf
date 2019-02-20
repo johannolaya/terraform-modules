@@ -38,7 +38,7 @@ resource "azurerm_app_service" "app" {
   connection_string {
     name = "DefaultDatabase"
     type = "SQLServer"
-    value = "${var.db_connection_base}"
+    value = "${var.db_connection_app_base}"
   }
 }
 
@@ -64,7 +64,7 @@ resource "azurerm_app_service_slot" "app_slot" {
   connection_string {
     name = "DefaultDatabase"
     type = "SQLServer"
-    value = "${var.db_connection_slot}"
+    value = "${var.db_connection_app_slot}"
   }
 }
 
