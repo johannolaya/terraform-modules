@@ -38,7 +38,7 @@ resource "azurerm_app_service" "app" {
 
   connection_string {
     name = ""
-    type = ""
+    type = "SQLServer"
     value = ""
   }
 }
