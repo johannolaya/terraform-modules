@@ -37,7 +37,7 @@ resource "azurerm_app_service" "app" {
     var.app_settings)}"
 
   connection_string {
-    name = ""
+    name = "Defaultdatabase"
     type = "SQLServer"
     value = ""
   }
