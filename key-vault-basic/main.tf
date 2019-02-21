@@ -18,15 +18,16 @@ resource "azurerm_key_vault" "kv" {
   access_policy {
     tenant_id = "${var.credential["tenant_id"]}"
     object_id = "${var.credential["object_id"]}"
-    key_permissions = "${element(var.kv_permissions,count.index%length(var.kv_permissions))}"
-    secret_permissions = "${element(var.kv_secret_permissions,count.index%length(var.kv_secret_permissions))}"
+    key_permissions = "${var.kv_permissions}"
+    secret_permissions = "${var.kv_secret_permissions}"
   }
 
   access_policy {
+    count = "${length(keys(var.secrets))}"
     tenant_id = "${var.credential["tenant_id"]}"
     object_id = "${var.microsoft_web_objectid}"
-    key_permissions = "${element(var.kv_permissions,count.index%length(var.kv_permissions))}"
-    secret_permissions = "${element(var.kv_secret_permissions,count.index%length(var.kv_secret_permissions))}"
+    key_permissions = "${var.kv_permissions}"
+    secret_permissions = "${var.kv_secret_permissions}"
   }
 
   enabled_for_disk_encryption = true
