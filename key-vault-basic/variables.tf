@@ -18,7 +18,6 @@ variable "credential" {
 }
 
 variable "microsoft_web_objectid" {
-  type = "map"
 }
 
 variable "kv_permissions" {
