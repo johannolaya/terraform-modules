@@ -17,9 +17,7 @@ variable "credential" {
   type = "map"
 }
 
-variable "access" {
-  type = "list"
-}
+
 
 variable "policy_object" {
   type = "list"

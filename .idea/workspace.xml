@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be270f05-ea13-4569-962f-724c5d9e045f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/key-vault-basic/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/key-vault-basic/main.tf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/key-vault-basic/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/key-vault-basic/variables.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage-account-basic/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/storage-account-basic/main.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage-account-basic/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/storage-account-basic/variables.tf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,11 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/key-vault-basic/main.tf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="42" column="42" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="42" />
+            <state relative-caret-position="135">
+              <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -47,11 +44,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/key-vault-basic/variables.tf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="23" column="23" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="23" />
+            <state relative-caret-position="193">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -77,8 +74,8 @@
         <option value="$PROJECT_DIR$/webapp-03-basic/main.tf" />
         <option value="$PROJECT_DIR$/storage-account-basic/main.tf" />
         <option value="$PROJECT_DIR$/storage-account-basic/variables.tf" />
-        <option value="$PROJECT_DIR$/key-vault-basic/variables.tf" />
         <option value="$PROJECT_DIR$/key-vault-basic/main.tf" />
+        <option value="$PROJECT_DIR$/key-vault-basic/variables.tf" />
       </list>
     </option>
   </component>
@@ -129,7 +126,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550788808647" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550788913598" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -299,17 +296,17 @@
     <entry file="file://$PROJECT_DIR$/storage-account-basic/main.tf">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/key-vault-basic/variables.tf">
+    <entry file="file://$PROJECT_DIR$/key-vault-basic/main.tf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="23" column="23" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="23" />
+        <state relative-caret-position="135">
+          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/key-vault-basic/main.tf">
+    <entry file="file://$PROJECT_DIR$/key-vault-basic/variables.tf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="42" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="42" />
+        <state relative-caret-position="193">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
