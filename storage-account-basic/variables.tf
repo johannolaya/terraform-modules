@@ -18,14 +18,3 @@ variable "sa_replication_type" {
 }
 
 
-variable "containers" {
-  type = "list"
-}
-
-variable "queues" {
-  type = "list"
-}
-
-variable "tables" {
-  type = "list"
-}
