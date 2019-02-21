@@ -22,7 +22,9 @@ resource "azurerm_key_vault_access_policy" "default" {
   resource_group_name = "${azurerm_key_vault.kv.resource_group_name}"
 
   tenant_id = "${var.credential["tenant_id"]}"
-  object_id = "${lookup(var.policy_object[count.index],"object_id")}"
+  //object_id = "${lookup(var.policy_object[count.index],"object_id")}"
+  object_id = "${element(var.policy_object,count.index%length(var.policy_object))}"
+  //name = "${element(var.tables,count.index%length(var.tables))}"
 
   key_permissions         = "${split(",",lookup(var.policy_object[count.index],"key_permissions"))}"
   secret_permissions      = "${split(",",lookup(var.policy_object[count.index],"secret_permissions"))}"
