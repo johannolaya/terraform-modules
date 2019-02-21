@@ -23,7 +23,6 @@ resource "azurerm_key_vault" "kv" {
   }
 
   access_policy {
-    count = "${length(keys(var.secrets))}"
     tenant_id = "${var.credential["tenant_id"]}"
     object_id = "${var.microsoft_web_objectid}"
     key_permissions = "${var.kv_permissions}"
