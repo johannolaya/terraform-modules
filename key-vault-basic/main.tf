@@ -36,7 +36,7 @@ resource "azurerm_key_vault" "kv" {
 
 resource "azurerm_key_vault_secret" "kv_secret" {
   count = "${length(keys(var.secrets))}"
-  name = "${element(var.secrets,count.index%length(var.secrets))}"
+  name = "${element(keys(var.secrets), count.index)}"
   value     = "${element(values(var.secrets), count.index)}"
   vault_uri = "${azurerm_key_vault.kv.vault_uri}"
 }
