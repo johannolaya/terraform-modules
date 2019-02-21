@@ -41,6 +41,19 @@ resource "azurerm_app_service" "app" {
     type = "SQLServer"
     value = "${var.db_connection_app_base}"
   }
+
+  connection_string {
+    name = "AzureWebJobsDashboard"
+    type = "SQLServer"
+    value = "${local.connection_string_storage}"
+  }
+
+  connection_string {
+    name = "AzureWebJobsStorage"
+    type = "SQLServer"
+    value = "${local.connection_string_storage}"
+  }
+
 }
 
 resource "azurerm_app_service_slot" "app_slot" {
@@ -67,6 +80,19 @@ resource "azurerm_app_service_slot" "app_slot" {
     type = "SQLServer"
     value = "${var.db_connection_app_slot}"
   }
+
+  connection_string {
+    name = "AzureWebJobsDashboard"
+    type = "SQLServer"
+    value = "${local.connection_string_storage}"
+  }
+
+  connection_string {
+    name = "AzureWebJobsStorage"
+    type = "SQLServer"
+    value = "${local.connection_string_storage}"
+  }
+
 }
 
 locals {
