@@ -17,18 +17,48 @@ variable "credential" {
   type = "map"
 }
 
-variable "microsoft_web_objectid" {
-}
-
-variable "kv_permissions" {
+variable "access" {
   type = "list"
 }
 
-variable "kv_secret_permissions" {
+variable "policy_object" {
   type = "list"
 }
+
+/*variable "microsoft_web_objectid" {
+  default = ""
+}*/
+
+
+variable "key_permissions" {
+   type = "list"
+
+   default = [
+     "get",
+     "list",
+   ]
+ }
+
+variable "secret_permissions" {
+   type = "list"
+
+   default = [
+     "get",
+     "list",
+   ]
+ }
+
+variable "certificate_permissions" {
+   type = "list"
+
+   default = [
+     "get",
+     "list",
+   ]
+ }
 
 variable "secrets" {
+  default = {}
   type= "map"
 }
 

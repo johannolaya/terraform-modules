@@ -1,18 +1,3 @@
-variable "containers" {
-  default = []
-  type = "list"
-}
-
-variable "queues" {
-  default = []
-  type = "list"
-}
-
-variable "tables" {
-  default = []
-  type = "list"
-}
-
 resource "random_id" "sa" {
   keepers = {
     azi_id = 1
