@@ -26,9 +26,9 @@ resource "azurerm_key_vault_access_policy" "default" {
   object_id = "${element(var.policy_object,count.index%length(var.policy_object))}"
   //name = "${element(var.tables,count.index%length(var.tables))}"
 
-  key_permissions         = "${split(",",lookup(var.policy_object[count.index],"key_permissions"))}"
-  secret_permissions      = "${split(",",lookup(var.policy_object[count.index],"secret_permissions"))}"
-  certificate_permissions = "${split(",",lookup(var.policy_object[count.index],"certificate_permissions"))}"
+  key_permissions         = "${split(",",element(var.policy_object[count.index],"key_permissions"))}"
+  secret_permissions      = "${split(",",element(var.policy_object[count.index],"secret_permissions"))}"
+  certificate_permissions = "${split(",",element(var.policy_object[count.index],"certificate_permissions"))}"
 }
 
   /*access_policy
