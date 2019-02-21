@@ -1,12 +1,15 @@
 variable "containers" {
+  default = []
   type = "list"
 }
 
 variable "queues" {
+  default = []
   type = "list"
 }
 
 variable "tables" {
+  default = []
   type = "list"
 }
 
