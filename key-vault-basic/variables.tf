@@ -69,7 +69,7 @@ variable "secret_permissions" {
 variable "certificate_permissions" {
    type = "list"
 
-   default = []
+   default = ["list"]
  }
 
 variable "secrets" {
