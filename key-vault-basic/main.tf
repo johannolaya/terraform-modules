@@ -17,7 +17,7 @@ resource "azurerm_key_vault" "kv" {
 }
 
 resource "azurerm_key_vault_access_policy" "default" {
-  count = "${length(keys(var.policy_object))}"
+  count = "${length(var.policy_object)}"
   vault_name          = "${azurerm_key_vault.kv.name}"
   resource_group_name = "${azurerm_key_vault.kv.resource_group_name}"
 
