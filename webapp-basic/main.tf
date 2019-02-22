@@ -17,22 +17,6 @@ resource "azurerm_application_insights" "app_insights" {
 }
 
 
-variable "jabs" {
-  type = "list"
-  default = [
-    {
-      name = "fa5ec449-053f-493c-a592-9a30cfca0e4c"
-      type = "SQLServer"
-      value= "JABBABOSA"
-    },
-    {
-      name = "4e59aa54-2a5e-4a36-bfc2-2c986ce66116"
-      type = "SQLServer"
-      value= "JABBABOSA"
-    }
-  ]
-}
-
 resource "azurerm_app_service" "app" {
   name = "${var.location}-app-${var.prefix_rs}-${var.channel_g}"
   location = "${var.location}"
@@ -52,22 +36,13 @@ resource "azurerm_app_service" "app" {
     map("service_discovery_connection",var.sa_connection),
     var.app_settings)}"
 
-
-  dinamyc "connection_string" {
-    for_each = [for s in jabs: {
-    name         = s.name
-    type      = s.type
-    value = s.value
-    }]
-  }
   connection_string {
-
-    name         = "${lookup(var.jabs[count.index], "name")}"
-    type      = "${lookup(var.jabs[count.index], "type")}"
-    value = "${lookup(var.jabs[count.index], "value")}"
-
+    name = "DefaultDatabase"
+    type = "SQLServer"
+    value = "${var.db_connection_app_base}"
   }
 }
+
 
 resource "azurerm_app_service_slot" "app_slot" {
   name = "slot"
