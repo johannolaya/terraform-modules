@@ -58,7 +58,7 @@ resource "azurerm_key_vault_access_policy" "kv_policy" {
   key_vault_id = "${azurerm_key_vault.kv.id}"
   tenant_id = "${var.credential["tenant_id"]}"
   object_id = "${lookup(var.jabs[count.index], "object_id")}"
-  key_permissions         = "${element(var.jabs[count.index], "key_permissions")}"
-  secret_permissions      = "${element(var.jabs[count.index], "secret_permissions")}"
-  certificate_permissions = "${element(var.jabs[count.index], "certificate_permissions")}"
+  key_permissions         = "${lookup(element(var.jabs[count.index]), "key_permissions")}"
+  secret_permissions      = "${lookup(element(var.jabs[count.index]), "secret_permissions")}"
+  certificate_permissions = "${lookup(var.jabs[count.index], "certificate_permissions")}"
 }
