@@ -51,12 +51,14 @@ variable "jabs" {
   ]
 }
 
+
+
 resource "azurerm_key_vault_access_policy" "kv_policy" {
   count = "${length(var.jabs)}"
   key_vault_id = "${azurerm_key_vault.kv.id}"
   tenant_id = "${var.credential["tenant_id"]}"
   object_id = "${element(var.jabs, "object_id")}"
-  key_permissions         = "${element(var.jabs,count.index(var.jabs))}"
+  key_permissions         = "${lookup(var.jabs[count.index], "key_permissions")}"
   secret_permissions      = "${element(var.jabs,"secret_permissions")}"
   certificate_permissions = "${element(var.jabs,"certificate_permissions")}"
 }
