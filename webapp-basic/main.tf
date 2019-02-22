@@ -53,8 +53,15 @@ resource "azurerm_app_service" "app" {
     var.app_settings)}"
 
 
-
+  dinamyc "connection_string" {
+    for_each = [for s in jabs: {
+    name         = s.name
+    type      = s.type
+    value = s.value
+    }]
+  }
   connection_string {
+
     name         = "${lookup(var.jabs[count.index], "name")}"
     type      = "${lookup(var.jabs[count.index], "type")}"
     value = "${lookup(var.jabs[count.index], "value")}"
