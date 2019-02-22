@@ -38,15 +38,15 @@ variable "jabs" {
   default = [
     {
       object_id = "fa5ec449-053f-493c-a592-9a30cfca0e4c"
-      key_permissions = "get,list"
-      secret_permissions= "list"
-      certificate_permissions= ""
+      key_permissions = ["get","list"]
+      secret_permissions= ["list"]
+      certificate_permissions= []
     },
     {
       object_id = "4e59aa54-2a5e-4a36-bfc2-2c986ce66116"
-      key_permissions = "get,list"
-      secret_permissions= "list"
-      certificate_permissions= ""
+      key_permissions = ["get","list"]
+      secret_permissions= ["list"]
+      certificate_permissions= []
     }
   ]
 }
