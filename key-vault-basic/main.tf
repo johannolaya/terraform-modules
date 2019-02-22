@@ -39,14 +39,14 @@ variable "jabs" {
     {
       object_id = "fa5ec449-053f-493c-a592-9a30cfca0e4c"
       key_permissions = "get,list"
-      secret_permissions= "get,list"
-      certificate_permissions= "get,list"
+      secret_permissions= "list"
+      certificate_permissions= ""
     },
     {
       object_id = "4e59aa54-2a5e-4a36-bfc2-2c986ce66116"
       key_permissions = "get,list"
-      secret_permissions= "get,list"
-      certificate_permissions= "get,list"
+      secret_permissions= "list"
+      certificate_permissions= ""
     }
   ]
 }
@@ -57,8 +57,8 @@ resource "azurerm_key_vault_access_policy" "kv_policy" {
   count = "${length(var.jabs)}"
   key_vault_id = "${azurerm_key_vault.kv.id}"
   tenant_id = "${var.credential["tenant_id"]}"
-  object_id = "${element(var.jabs, "object_id")}"
+  object_id = "${lookup(var.jabs[count.index], "object_id")}"
   key_permissions         = "${lookup(var.jabs[count.index], "key_permissions")}"
-  secret_permissions      = "${element(var.jabs,"secret_permissions")}"
-  certificate_permissions = "${element(var.jabs,"certificate_permissions")}"
+  secret_permissions      = "${lookup(var.jabs[count.index], "secret_permissions")}"
+  certificate_permissions = "${lookup(var.jabs[count.index], "certificate_permissions")}"
 }
