@@ -17,20 +17,12 @@ variable "credential" {
   type = "map"
 }
 
-
-
 variable "policy_object" {
   type = "list"
 }
 
-/*variable "microsoft_web_objectid" {
-  default = ""
-}*/
-
-
 variable "key_permissions" {
    type = "list"
-
    default = [
      "backup",
      "create",
@@ -53,7 +45,6 @@ variable "key_permissions" {
 
 variable "secret_permissions" {
    type = "list"
-
    default = [
      "backup",
      "delete",
@@ -68,7 +59,6 @@ variable "secret_permissions" {
 
 variable "certificate_permissions" {
    type = "list"
-
    default = ["list"]
  }
 
@@ -76,4 +66,6 @@ variable "secrets" {
   default = {}
   type= "map"
 }
+
+
 
