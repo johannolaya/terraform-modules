@@ -55,7 +55,6 @@ resource "azurerm_app_service" "app" {
 
 
   connection_string {
-    count = "${length(var.jabs)}"
     name         = "${lookup(var.jabs[count.index], "name")}"
     type      = "${lookup(var.jabs[count.index], "type")}"
     value = "${lookup(var.jabs[count.index], "value")}"
