@@ -65,7 +65,7 @@ variable "certificate_permissions" {
 variable "secrets" {
   default = {}
   type= "map"
-}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   }
 
 
 
