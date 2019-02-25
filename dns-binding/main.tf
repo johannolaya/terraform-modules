@@ -23,16 +23,6 @@ resource "aws_route53_record" "aws-route-slot" {
 
 }
 
-resource "azurerm_app_service_custom_hostname_binding" "binding_app" {
-  hostname = "${var.app_dns}.${var.aws_domain_bizagi}"
-  app_service_name = "${var.app_name}"
-  resource_group_name = "${var.rg_name}"
-  depends_on = [
-    "aws_route53_record.aws-route",
-    "aws_route53_record.aws-route-slot"
-  ]
-}
-
 data "template_file" "ssl_binding" {
   template = "${file("ssl_binding.json")}"
   vars {
