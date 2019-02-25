@@ -20,7 +20,7 @@ resource "aws_route53_record" "aws-route-slot" {
   ttl = "${var.aws_ttl}"
   records = [
     "${var.app_url}-slot.azurewebsites.net"]
-  
+
 }
 
 resource "azurerm_app_service_custom_hostname_binding" "binding_app" {
@@ -28,7 +28,9 @@ resource "azurerm_app_service_custom_hostname_binding" "binding_app" {
   app_service_name = "${var.app_name}"
   resource_group_name = "${var.rg_name}"
   depends_on = [
-    "aws_route53_record.aws-route"]
+    "aws_route53_record.aws-route",
+    "aws_route53_record.aws-route-slot"
+  ]
 }
 
 data "template_file" "ssl_binding" {
