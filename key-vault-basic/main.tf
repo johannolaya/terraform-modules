@@ -27,8 +27,8 @@ resource "azurerm_key_vault_access_policy" "kv_policy" {
 
 
 resource "azurerm_key_vault_secret" "kv_secret" {
-count = "${length(keys(var.secrets))}"
-name = "${element(keys(var.secrets), count.index)}"
-value     = "${element(values(var.secrets), count.index)}"
+count = "${length(keys(var.kv_secrets))}"
+name = "${element(keys(var.kv_secrets), count.index)}"
+value     = "${element(values(var.kv_secrets), count.index)}"
 key_vault_id = "${azurerm_key_vault.kv.id}"
 }

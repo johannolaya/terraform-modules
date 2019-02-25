@@ -31,18 +31,46 @@ resource "azurerm_app_service" "app" {
 
   app_settings = "${merge(
     map("APPINSIGHTS_INSTRUMENTATIONKEY",local.app_instrumentation_key),
-    map("setting06",var.client_secret),
-    map("setting07",var.client_id),
-    map("service_discovery_connection",var.sa_connection),
     var.app_settings)}"
 
   connection_string {
-    name = "DefaultDatabase"
-    type = "SQLServer"
-    value = "${var.db_connection_app_base}"
+    name = "${var.connection_01.name}"
+    type = "${var.connection_01.type}"
+    value = "${var.connection_01.value}"
   }
-}
 
+  connection_string {
+    name = "${var.connection_02.name}"
+    type = "${var.connection_02.type}"
+    value = "${var.connection_02.value}"
+  }
+
+  connection_string {
+    name = "${var.connection_03.name}"
+    type = "${var.connection_03.type}"
+    value = "${var.connection_03.value}"
+  }
+
+  connection_string {
+    name = "${var.connection_04.name}"
+    type = "${var.connection_04.type}"
+    value = "${var.connection_04.value}"
+  }
+
+  connection_string {
+    name = "${var.connection_05.name}"
+    type = "${var.connection_05.type}"
+    value = "${var.connection_05.value}"
+  }
+
+  connection_string {
+    name = "${var.connection_06.name}"
+    type = "${var.connection_06.type}"
+    value = "${var.connection_06.value}"
+  }
+
+
+}
 
 resource "azurerm_app_service_slot" "app_slot" {
   name = "slot"
@@ -58,16 +86,44 @@ resource "azurerm_app_service_slot" "app_slot" {
 
   app_settings = "${merge(
     map("APPINSIGHTS_INSTRUMENTATIONKEY",local.app_instrumentation_key),
-    map("setting05",var.client_secret),
-    map("setting06",var.client_id),
-    map("service_discovery_connection",var.sa_connection),
     var.app_settings_slot)}"
 
   connection_string {
-    name = "DefaultDatabase"
-    type = "SQLServer"
-    value = "${var.db_connection_app_slot}"
+    name = "${var.connection_slot_01.name}"
+    type = "${var.connection_slot_01.type}"
+    value = "${var.connection_slot_01.value}"
   }
+
+  connection_string {
+    name = "${var.connection_slot_02.name}"
+    type = "${var.connection_slot_02.type}"
+    value = "${var.connection_slot_02.value}"
+  }
+
+  connection_string {
+    name = "${var.connection_slot_03.name}"
+    type = "${var.connection_slot_03.type}"
+    value = "${var.connection_slot_03.value}"
+  }
+
+  connection_string {
+    name = "${var.connection_slot_04.name}"
+    type = "${var.connection_slot_04.type}"
+    value = "${var.connection_slot_04.value}"
+  }
+
+  connection_string {
+    name = "${var.connection_slot_05.name}"
+    type = "${var.connection_slot_05.type}"
+    value = "${var.connection_slot_05.value}"
+  }
+
+  connection_string {
+    name = "${var.connection_slot_06.name}"
+    type = "${var.connection_slot_06.type}"
+    value = "${var.connection_slot_06.value}"
+  }
+
 }
 
 locals {

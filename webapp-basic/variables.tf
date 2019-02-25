@@ -39,5 +39,113 @@ variable "client_secret" {
 variable "sa_connection" {
 }
 
+variable "connection_01" {
+  default = {
+    name = "DefaultDatabase"
+    type = "SQLServer"
+    value = "no reference"
+  }
+  type= "map"
+}
 
+variable "connection_02" {
+  default = {
+    name = "DefaultDatabase"
+    type = "SQLServer"
+    value = "no reference"
+  }
+  type= "map"
+}
+
+variable "connection_03" {
+  default = {
+    name = "DefaultDatabase"
+    type = "SQLServer"
+    value = "no reference"
+  }
+  type= "map"
+}
+
+variable "connection_04" {
+  default = {
+    name = "DefaultDatabase"
+    type = "SQLServer"
+    value = "no reference"
+  }
+  type= "map"
+}
+
+variable "connection_05" {
+  default = {
+    name = "DefaultDatabase"
+    type = "SQLServer"
+    value = "no reference"
+  }
+  type= "map"
+}
+
+variable "connection_06" {
+  default = {
+    name = "DefaultDatabase"
+    type = "SQLServer"
+    value = "no reference"
+  }
+  type= "map"
+}
+
+
+
+variable "connection_slot_01" {
+  default = {
+    name = "DefaultDatabase"
+    type = "SQLServer"
+    value = "no reference"
+  }
+  type= "map"
+}
+
+variable "connection_slot_02" {
+  default = {
+    name = "DefaultDatabase"
+    type = "SQLServer"
+    value = "no reference"
+  }
+  type= "map"
+}
+
+variable "connection_slot_03" {
+  default = {
+    name = "DefaultDatabase"
+    type = "SQLServer"
+    value = "no reference"
+  }
+  type= "map"
+}
+
+variable "connection_slot_04" {
+  default = {
+    name = "DefaultDatabase"
+    type = "SQLServer"
+    value = "no reference"
+  }
+  type= "map"
+}
+
+variable "connection_slot_05" {
+  default = {
+    name = "DefaultDatabase"
+    type = "SQLServer"
+    value = "no reference"
+  }
+  type= "map"
+}
+
+variable "connection_slot_06" {
+  default = {
+    name = "DefaultDatabase"
+    type = "SQLServer"
+    value = "no reference"
+  }
+  type= "map"
+}
 

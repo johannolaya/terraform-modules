@@ -62,9 +62,10 @@ variable "certificate_permissions" {
    default = ["list"]
  }
 
-variable "secrets" {
+variable "kv_secrets" {
   default = {}
   type= "map"
+}
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    }
 
 
