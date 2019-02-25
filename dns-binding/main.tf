@@ -49,8 +49,6 @@ resource "azurerm_template_deployment" "ssl_binding" {
   deployment_mode = "Incremental"
   template_body = "${data.template_file.ssl_binding.rendered}"
   depends_on = [
-    "azurerm_app_service_slot.app_slot",
-    "azurerm_app_service.app",
     "aws_route53_record.aws-route",
     "aws_route53_record.aws-route-slot"]
 }
