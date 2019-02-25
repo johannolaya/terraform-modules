@@ -31,6 +31,7 @@ resource "azurerm_app_service" "app" {
 
   app_settings = "${merge(
     map("APPINSIGHTS_INSTRUMENTATIONKEY",local.app_instrumentation_key),
+    map("automationManagerAppInsightsInstrumentationKey",local.app_instrumentation_key),
     var.app_settings)}"
 
   connection_string {
@@ -86,6 +87,7 @@ resource "azurerm_app_service_slot" "app_slot" {
 
   app_settings = "${merge(
     map("APPINSIGHTS_INSTRUMENTATIONKEY",local.app_instrumentation_key),
+    map("automationManagerAppInsightsInstrumentationKey",local.app_instrumentation_key),
     var.app_settings_slot)}"
 
   connection_string {

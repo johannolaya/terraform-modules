@@ -24,20 +24,6 @@ variable "app_settings_slot" {
   type = "map"
 }
 
-variable "db_connection_app_base" {
-}
-
-variable "db_connection_app_slot" {
-}
-
-variable "client_id" {
-}
-
-variable "client_secret" {
-}
-
-variable "sa_connection" {
-}
 
 variable "connection_01" {
   default = {
