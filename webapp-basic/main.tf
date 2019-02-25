@@ -35,39 +35,39 @@ resource "azurerm_app_service" "app" {
     var.app_settings)}"
 
   connection_string {
-    name = "${var.connection_01.name}"
-    type = "${var.connection_01.type}"
-    value = "${var.connection_01.value}"
+    name = "${lookup(var.connection_01, "name")}"
+    type = "${lookup(var.connection_01, "type")}"
+    value = "${lookup(var.connection_01, "value")}"
   }
 
   connection_string {
-    name = "${var.connection_02.name}"
-    type = "${var.connection_02.type}"
-    value = "${var.connection_02.value}"
+    name = "${lookup(var.connection_02, "name")}"
+    type = "${lookup(var.connection_02, "type")}"
+    value = "${lookup(var.connection_02, "value")}"
   }
 
   connection_string {
-    name = "${var.connection_03.name}"
-    type = "${var.connection_03.type}"
-    value = "${var.connection_03.value}"
+    name = "${lookup(var.connection_03, "name")}"
+    type = "${lookup(var.connection_03, "type")}"
+    value = "${lookup(var.connection_03, "value")}"
   }
 
   connection_string {
-    name = "${var.connection_04.name}"
-    type = "${var.connection_04.type}"
-    value = "${var.connection_04.value}"
+    name = "${lookup(var.connection_04, "name")}"
+    type = "${lookup(var.connection_04, "type")}"
+    value = "${lookup(var.connection_04, "value")}"
   }
 
   connection_string {
-    name = "${var.connection_05.name}"
-    type = "${var.connection_05.type}"
-    value = "${var.connection_05.value}"
+    name = "${lookup(var.connection_05, "name")}"
+    type = "${lookup(var.connection_05, "type")}"
+    value = "${lookup(var.connection_05, "value")}"
   }
 
   connection_string {
-    name = "${var.connection_06.name}"
-    type = "${var.connection_06.type}"
-    value = "${var.connection_06.value}"
+    name = "${lookup(var.connection_06, "name")}"
+    type = "${lookup(var.connection_06, "type")}"
+    value = "${lookup(var.connection_06, "value")}"
   }
 
 
@@ -91,39 +91,39 @@ resource "azurerm_app_service_slot" "app_slot" {
     var.app_settings_slot)}"
 
   connection_string {
-    name = "${var.connection_slot_01.name}"
-    type = "${var.connection_slot_01.type}"
-    value = "${var.connection_slot_01.value}"
+    name = "${lookup(var.connection_slot_01, "name")}"
+    type = "${lookup(var.connection_slot_01, "type")}"
+    value = "${lookup(var.connection_slot_01, "value")}"
   }
 
   connection_string {
-    name = "${var.connection_slot_02.name}"
-    type = "${var.connection_slot_02.type}"
-    value = "${var.connection_slot_02.value}"
+    name = "${lookup(var.connection_slot_02, "name")}"
+    type = "${lookup(var.connection_slot_02, "type")}"
+    value = "${lookup(var.connection_slot_02, "value")}"
   }
 
   connection_string {
-    name = "${var.connection_slot_03.name}"
-    type = "${var.connection_slot_03.type}"
-    value = "${var.connection_slot_03.value}"
+    name = "${lookup(var.connection_slot_03, "name")}"
+    type = "${lookup(var.connection_slot_03, "type")}"
+    value = "${lookup(var.connection_slot_03, "value")}"
   }
 
   connection_string {
-    name = "${var.connection_slot_04.name}"
-    type = "${var.connection_slot_04.type}"
-    value = "${var.connection_slot_04.value}"
+    name = "${lookup(var.connection_slot_04, "name")}"
+    type = "${lookup(var.connection_slot_04, "type")}"
+    value = "${lookup(var.connection_slot_04, "value")}"
   }
 
   connection_string {
-    name = "${var.connection_slot_05.name}"
-    type = "${var.connection_slot_05.type}"
-    value = "${var.connection_slot_05.value}"
+    name = "${lookup(var.connection_slot_05, "name")}"
+    type = "${lookup(var.connection_slot_05, "type")}"
+    value = "${lookup(var.connection_slot_05, "value")}"
   }
 
   connection_string {
-    name = "${var.connection_slot_06.name}"
-    type = "${var.connection_slot_06.type}"
-    value = "${var.connection_slot_06.value}"
+    name = "${lookup(var.connection_slot_06, "name")}"
+    type = "${lookup(var.connection_slot_06, "type")}"
+    value = "${lookup(var.connection_slot_06, "value")}"
   }
 
 }
