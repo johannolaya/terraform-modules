@@ -1,16 +1,21 @@
 variable "rg_name" {
+
 }
 
 variable "location" {
+
 }
 
 variable "prefix_rs" {
+
 }
 
 variable "channel_g" {
+
 }
 
 variable "kv_sku" {
+
 }
 
 variable "credential" {

@@ -17,17 +17,17 @@ variable "sa_tier" {
 variable "sa_replication_type" {
 }
 
-variable "containers" {
+variable "sa_containers" {
   default = []
   type = "list"
 }
 
-variable "queues" {
+variable "sa_queues" {
   default = []
   type = "list"
 }
 
-variable "tables" {
+variable "sa_tables" {
   default = []
   type = "list"
 }

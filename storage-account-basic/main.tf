@@ -14,26 +14,26 @@ resource "azurerm_storage_account" "sa" {
 }
 
 resource "azurerm_storage_container" "sa_containers" {
-  name = "${element(var.containers,count.index%length(var.containers))}"
+  name = "${element(var.sa_containers,count.index%length(var.sa_containers))}"
   resource_group_name = "${var.rg_name}"
   storage_account_name = "${azurerm_storage_account.sa.name}"
   container_access_type = "private"
-  count = "${length(var.containers )}"
+  count = "${length(var.sa_containers )}"
   depends_on = ["azurerm_storage_account.sa"]
 }
 
 resource "azurerm_storage_queue" "sa_queues" {
-  name = "${element(var.queues,count.index%length(var.queues))}"
+  name = "${element(var.sa_queues,count.index%length(var.sa_queues))}"
   resource_group_name = "${var.rg_name}"
   storage_account_name = "${azurerm_storage_account.sa.name}"
-  count = "${length(var.queues)}"
+  count = "${length(var.sa_queues)}"
   depends_on = ["azurerm_storage_account.sa"]
 }
 
 resource "azurerm_storage_table" "sa_tables" {
-  name = "${element(var.tables,count.index%length(var.tables))}"
+  name = "${element(var.sa_tables,count.index%length(var.sa_tables))}"
   resource_group_name = "${var.rg_name}"
   storage_account_name = "${azurerm_storage_account.sa.name}"
-  count = "${length(var.tables)}"
+  count = "${length(var.sa_tables)}"
   depends_on = ["azurerm_storage_account.sa"]
 }
