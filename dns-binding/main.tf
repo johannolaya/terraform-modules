@@ -1,0 +1,40 @@
+data "aws_route53_zone" "domain" {
+  zone_id = "${var.aws_zone_id}"
+  private_zone = true
+}
+
+
+resource "aws_route53_record" "aws-route" {
+  zone_id = "${data.aws_route53_zone.domain.zone_id}"
+  name = "${var.app_dns}.${data.aws_route53_zone.domain.name}"
+  type = "${var.aws_type}"
+  ttl = "${var.aws_ttl}"
+  records = [
+    "${var.app_url}.azurewebsites.net"]
+}
+
+resource "azurerm_app_service_custom_hostname_binding" "binding_app" {
+  hostname = "${var.app_dns}.${var.aws_domain_bizagi}"
+  app_service_name = "${var.app_name}"
+  resource_group_name = "${var.rg_name}"
+  depends_on = [
+    "aws_route53_record.aws-route"]
+}
+
+data "template_file" "ssl_binding" {
+  template = "${file("ssl_binding.json")}"
+  vars {
+    sp_id = "${var.sp_id}"
+    app_name = "${var.app_name}/${var.app_dns}.${var.aws_domain_bizagi}"
+    app_slot_name = "${var.app_name}/slot/${var.app_dns}slot.${var.aws_domain_bizagi}"
+    key_vault_id = "${var.key_vault_id}"
+  }
+}
+
+resource "azurerm_template_deployment" "ssl_binding" {
+  name = "${var.location}-app-service-binding-${var.channel_g}"
+  resource_group_name = "${var.rg_name}"
+  deployment_mode = "Incremental"
+  template_body = "${data.template_file.ssl_binding.rendered}"
+  depends_on = ["aws_route53_record.aws-route"]
+}
