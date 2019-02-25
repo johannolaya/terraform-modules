@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="be270f05-ea13-4569-962f-724c5d9e045f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/dns-binding/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/dns-binding/main.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dns-binding/ssl_binding.json" beforeDir="false" afterPath="$PROJECT_DIR$/dns-binding/ssl_binding.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,8 +25,8 @@
       <file leaf-file-name="outputs.tf" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/key-vault-basic/outputs.tf">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="19" selection-start-column="8" selection-end-column="19" />
+            <state relative-caret-position="15">
+              <caret line="1" column="43" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -35,8 +34,17 @@
       <file leaf-file-name="main.tf" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dns-binding/main.tf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+            <state relative-caret-position="810">
+              <caret line="54" column="40" lean-forward="true" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.tf" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp-basic/main.tf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="75" column="34" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -379,13 +387,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp-basic/main.tf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="37" column="49" lean-forward="true" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/virtual-machine/main.tf">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -410,13 +411,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/key-vault-basic/outputs.tf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" selection-start-column="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/key-vault-basic/main.tf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -431,10 +425,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/webapp-basic/main.tf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="75" column="34" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/key-vault-basic/outputs.tf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="43" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dns-binding/main.tf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="810">
+          <caret line="54" column="40" lean-forward="true" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
         </state>
       </provider>
     </entry>

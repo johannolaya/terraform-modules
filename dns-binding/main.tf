@@ -20,6 +20,8 @@ resource "aws_route53_record" "aws-route-slot" {
   ttl = "${var.aws_ttl}"
   records = [
     "${var.app_url}-slot.azurewebsites.net"]
+  depends_on = [
+    "azurerm_app_service_slot.app_slot"]
 
 }
 
@@ -46,6 +48,10 @@ resource "azurerm_template_deployment" "ssl_binding" {
   resource_group_name = "${var.rg_name}"
   deployment_mode = "Incremental"
   template_body = "${data.template_file.ssl_binding.rendered}"
-  depends_on = ["aws_route53_record.aws-route"]
+  depends_on = [
+    "azurerm_app_service_slot.app_slot",
+    "azurerm_app_service.app",
+    "aws_route53_record.aws-route",
+    "aws_route53_record.aws-route-slot"]
 }
 
