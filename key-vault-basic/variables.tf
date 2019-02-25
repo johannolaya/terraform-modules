@@ -66,7 +66,3 @@ variable "kv_secrets" {
   default = {}
   type= "map"
 }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   }
-
-
-
