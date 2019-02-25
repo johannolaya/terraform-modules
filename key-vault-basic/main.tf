@@ -23,6 +23,7 @@ resource "azurerm_key_vault_access_policy" "kv_policy" {
   key_permissions         = "${var.key_permissions}"
   secret_permissions      = "${var.secret_permissions}"
   certificate_permissions = "${var.certificate_permissions}"
+  depends_on = ["azurerm_key_vault.kv"]
 }
 
 
@@ -31,4 +32,5 @@ count = "${length(keys(var.kv_secrets))}"
 name = "${element(keys(var.kv_secrets), count.index)}"
 value     = "${element(values(var.kv_secrets), count.index)}"
 key_vault_id = "${azurerm_key_vault.kv.id}"
+  depends_on = ["azurerm_key_vault.kv"]
 }
