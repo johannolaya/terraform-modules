@@ -2,16 +2,16 @@
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "sp_id": {
-      "defaultValue": "${sp_id}",
+    "service_plan_id": {
+      "defaultValue": "${service_plan_id}",
       "type": "string"
     },
-    "app_name": {
-      "defaultValue": "${app_name}",
+    "app_service_name": {
+      "defaultValue": "${app_service_name}",
       "type": "string"
     },
-    "app_slot_name": {
-      "defaultValue": "${app_slot_name}",
+    "app_service_slot_name": {
+      "defaultValue": "${app_service_slot_name}",
       "type": "string"
     },
     "key_vault_id": {
@@ -28,12 +28,12 @@
       "properties": {
         "keyVaultId": "[parameters('key_vault_id')]",
         "keyVaultSecretName": "bizagi-certificate",
-        "serverFarmId": "[parameters('sp_id')]"
+        "serverFarmId": "[parameters('service_plan_id')]"
       }
     },
     {
       "type": "Microsoft.Web/sites/hostnameBindings",
-      "name": "[parameters('app_name')]",
+      "name": "[parameters('app_service_name')]",
       "apiVersion": "2016-03-01",
       "location": "[resourceGroup().location]",
       "properties": {
@@ -46,7 +46,7 @@
     },
     {
       "type": "Microsoft.Web/sites/slots/hostNameBindings",
-      "name": "[parameters('app_slot_name')]",
+      "name": "[parameters('app_service_slot_name')]",
       "apiVersion": "2016-08-01",
       "location": "[resourceGroup().location]",
       "properties": {
