@@ -9,6 +9,7 @@ data "template_file" "send_grid" {
     sendgrid_contact_lastName = "${var.sendgrid["last_name"]}"
     sendgrid_company = "${var.sendgrid["company_name"]}"
     sendgrid_account_email = "${var.sendgrid["email"]}"
+    sendgrid_plan_name= "${var.sendgrid["plan_name"]}"
   }
 }
 
