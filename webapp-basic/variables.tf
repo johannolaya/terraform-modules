@@ -135,3 +135,7 @@ variable "connection_slot_06" {
   type= "map"
 }
 
+
+variable "app_name_slot" {
+}
+
