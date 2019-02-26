@@ -22,6 +22,3 @@ resource "aws_route53_record" "aws-route-slot" {
     "${var.app_url}-slot.azurewebsites.net"]
 
 }
-
-
-

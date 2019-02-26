@@ -44,7 +44,4 @@
     depends_on = [
       "azurerm_sql_server.sdb"]
   }
-  terraform {
-  backend "azurerm" {}
-}
 
