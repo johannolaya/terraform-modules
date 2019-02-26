@@ -10,7 +10,7 @@
       environment = "${var.prefix_rs}"
     }
   }
-  
+
   resource "azurerm_sql_firewall_rule" "ip-azure-services" {
     name = "AllowAllAzureService"
     resource_group_name = "${var.rg_name}"

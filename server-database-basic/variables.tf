@@ -23,5 +23,5 @@ variable "sdb_ip_portal" {
 }
 
 variable "sdb_firewall_ips"{
-  type=map
+  type="map"
 }
