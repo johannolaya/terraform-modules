@@ -19,7 +19,7 @@
     end_ip_address = "0.0.0.0"
   }
 
- resource "azurerm_sql_firewall_rule" "ip-azure-services" {
+ resource "azurerm_sql_firewall_rule" "ip-custom-services" {
    name = "${element(keys(var.sdb_firewall_ips), count.index)}"
    count="${length(keys(var.sdb_firewall_ips))}"
    resource_group_name = "${var.rg_name}"

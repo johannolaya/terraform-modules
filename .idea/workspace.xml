@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be270f05-ea13-4569-962f-724c5d9e045f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/server-database-basic/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/server-database-basic/variables.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-database-basic/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/server-database-basic/main.tf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,16 +48,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server-database-basic/main.tf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="32" lean-forward="true" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+            <state relative-caret-position="315">
+              <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server-database-basic/variables.tf">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -101,8 +101,8 @@
         <option value="$PROJECT_DIR$/dns-binding/main.tf" />
         <option value="$PROJECT_DIR$/webapp-basic/variables.tf" />
         <option value="$PROJECT_DIR$/dns-binding/variables.tf" />
-        <option value="$PROJECT_DIR$/server-database-basic/main.tf" />
         <option value="$PROJECT_DIR$/server-database-basic/variables.tf" />
+        <option value="$PROJECT_DIR$/server-database-basic/main.tf" />
       </list>
     </option>
   </component>
@@ -153,7 +153,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551208025555" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551208170588" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../DevOps/rebase-source-cloud" />
   </component>
   <component name="RecentsManager">
@@ -367,17 +367,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server-database-basic/main.tf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="32" lean-forward="true" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server-database-basic/variables.tf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server-database-basic/main.tf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
         </state>
       </provider>
     </entry>
