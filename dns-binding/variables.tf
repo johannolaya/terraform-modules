@@ -39,6 +39,10 @@ variable "channel_g" {
 
 
 
+variable "app_name_slot" {
+}
+
+
 
 
 
