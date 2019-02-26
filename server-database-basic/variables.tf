@@ -16,12 +16,6 @@ variable "db_user" {
 variable "db_password" {
 }
 
-variable "sdb_ip_bizagi" {
-}
-
-variable "sdb_ip_portal" {
-}
-
 variable "sdb_firewall_ips"{
   type="map"
 }
