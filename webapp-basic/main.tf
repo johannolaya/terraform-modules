@@ -135,6 +135,3 @@ locals {
   app_instrumentation_key = "${azurerm_application_insights.app_insights.instrumentation_key}"
 }
 
-terraform {
-  backend "azurerm" {}
-}
