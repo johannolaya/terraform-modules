@@ -10,24 +10,7 @@
       environment = "${var.prefix_rs}"
     }
   }
-  resource "azurerm_sql_firewall_rule" "ip-bizagi" {
-    name = "FirewallRuleBizagi"
-    resource_group_name = "${var.rg_name}"
-    server_name = "${azurerm_sql_server.sdb.name}"
-    start_ip_address = "${var.sdb_ip_bizagi}"
-    end_ip_address = "${var.sdb_ip_bizagi}"
-    depends_on = [
-      "azurerm_sql_server.sdb"]
-  }
-  resource "azurerm_sql_firewall_rule" "ip-portal" {
-    name = "FirewallRuePortal"
-    resource_group_name = "${var.rg_name}"
-    server_name = "${azurerm_sql_server.sdb.name}"
-    start_ip_address = "${var.sdb_ip_portal}"
-    end_ip_address = "${var.sdb_ip_portal}"
-    depends_on = [
-      "azurerm_sql_server.sdb"]
-  }
+  
   resource "azurerm_sql_firewall_rule" "ip-azure-services" {
     name = "AllowAllAzureService"
     resource_group_name = "${var.rg_name}"
@@ -35,6 +18,16 @@
     start_ip_address = "0.0.0.0"
     end_ip_address = "0.0.0.0"
   }
+
+ resource "azurerm_sql_firewall_rule" "ip-azure-services" {
+   name = "${element(keys(var.sdb_firewall_ips), count.index)}"
+   count="${length(keys(var.sdb_firewall_ips))}"
+   resource_group_name = "${var.rg_name}"
+   server_name = "${azurerm_sql_server.sdb.name}"
+   start_ip_address = "${element(values(var.sdb_firewall_ips), count.index)}"
+   end_ip_address = "${element(values(var.sdb_firewall_ips), count.index)}"
+ }
+
   resource "azurerm_sql_database" "db" {
     name = "${var.prefix_rs}-db-${var.channel_g}"
     resource_group_name = "${var.rg_name}"
