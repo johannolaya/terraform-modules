@@ -70,6 +70,7 @@ resource "azurerm_app_service" "app" {
     value = "${lookup(var.connection_06, "value")}"
   }
 
+  depends_on = ["azurerm_application_insights.app_insights"]
 
 }
 
@@ -125,6 +126,8 @@ resource "azurerm_app_service_slot" "app_slot" {
     type = "${lookup(var.connection_slot_06, "type")}"
     value = "${lookup(var.connection_slot_06, "value")}"
   }
+
+  depends_on = ["azurerm_application_insights.app_insights","azurerm_app_service.app"]
 
 }
 

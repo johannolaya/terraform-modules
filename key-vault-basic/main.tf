@@ -32,5 +32,5 @@ count = "${length(keys(var.kv_secrets))}"
 name = "${element(keys(var.kv_secrets), count.index)}"
 value     = "${element(values(var.kv_secrets), count.index)}"
 key_vault_id = "${azurerm_key_vault.kv.id}"
-  depends_on = ["azurerm_key_vault.kv"]
+  depends_on = ["azurerm_key_vault.kv","azurerm_key_vault_access_policy.kv_policy"]
 }
