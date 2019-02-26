@@ -1,0 +1,58 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "service_plan_id": {
+      "defaultValue": "${service_plan_id}",
+      "type": "string"
+    },
+    "app_service_name": {
+      "defaultValue": "${app_service_name}",
+      "type": "string"
+    },
+    "app_service_slot_name": {
+      "defaultValue": "${app_service_slot_name}",
+      "type": "string"
+    },
+    "key_vault_id": {
+      "defaultValue": "${key_vault_id}",
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Web/certificates",
+      "name": "bizagi-certificate",
+      "apiVersion": "2016-03-01",
+      "location": "[resourceGroup().location]",
+      "properties": {
+        "keyVaultId": "[parameters('key_vault_id')]",
+        "keyVaultSecretName": "bizagi-certificate",
+        "serverFarmId": "[parameters('service_plan_id')]"
+      }
+    },
+    {
+      "type": "Microsoft.Web/sites/hostnameBindings",
+      "name": "[parameters('app_service_name')]",
+      "apiVersion": "2016-03-01",
+      "location": "[resourceGroup().location]",
+      "properties": {
+        "sslState": "SniEnabled",
+        "thumbprint":"[reference(resourceId('Microsoft.Web/certificates', 'bizagi-certificate')).Thumbprint]"
+      },
+      "dependsOn": [
+        "[concat('Microsoft.Web/certificates/','bizagi-certificate')]"
+      ]
+    },
+    {
+      "type": "Microsoft.Web/sites/slots/hostNameBindings",
+      "name": "[parameters('app_service_slot_name')]",
+      "apiVersion": "2016-08-01",
+      "location": "[resourceGroup().location]",
+      "properties": {
+        "sslState": "SniEnabled",
+        "thumbprint":"[reference(resourceId('Microsoft.Web/certificates', 'bizagi-certificate')).Thumbprint]"
+      }
+    }
+  ]
+}
