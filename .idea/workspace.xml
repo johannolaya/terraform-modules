@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be270f05-ea13-4569-962f-724c5d9e045f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/key-vault-basic/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/key-vault-basic/main.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp-basic/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/webapp-basic/main.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dns-binding/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/dns-binding/main.tf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,11 +13,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.tf" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.tf" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/key-vault-basic/main.tf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+            <state relative-caret-position="30">
+              <caret line="2" column="17" lean-forward="true" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.tf" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dns-binding/main.tf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="660">
+              <caret line="44" column="33" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.tf" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp-basic/main.tf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="76" column="45" selection-start-line="76" selection-start-column="37" selection-end-line="76" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -57,9 +74,9 @@
         <option value="$PROJECT_DIR$/storage-account-basic/outputs.tf" />
         <option value="$PROJECT_DIR$/webapp-basic/outputs.tf" />
         <option value="$PROJECT_DIR$/dns-binding/ssl_binding.json" />
-        <option value="$PROJECT_DIR$/dns-binding/main.tf" />
         <option value="$PROJECT_DIR$/key-vault-basic/main.tf" />
         <option value="$PROJECT_DIR$/webapp-basic/main.tf" />
+        <option value="$PROJECT_DIR$/dns-binding/main.tf" />
       </list>
     </option>
   </component>
@@ -350,13 +367,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dns-binding/main.tf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="22" selection-start-column="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server-database-basic/main.tf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -371,17 +381,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp-basic/main.tf">
+    <entry file="file://$PROJECT_DIR$/key-vault-basic/main.tf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1935">
-          <caret line="129" column="80" selection-start-line="129" selection-start-column="61" selection-end-line="129" selection-end-column="80" />
+        <state relative-caret-position="30">
+          <caret line="2" column="17" lean-forward="true" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/key-vault-basic/main.tf">
+    <entry file="file://$PROJECT_DIR$/webapp-basic/main.tf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+        <state relative-caret-position="224">
+          <caret line="76" column="45" selection-start-line="76" selection-start-column="37" selection-end-line="76" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dns-binding/main.tf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="44" column="33" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
         </state>
       </provider>
     </entry>

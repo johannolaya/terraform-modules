@@ -40,6 +40,9 @@ resource "azurerm_template_deployment" "ssl_binding" {
   template_body = "${data.template_file.ssl_binding.rendered}"
   depends_on = [
     "aws_route53_record.aws-route",
-    "aws_route53_record.aws-route-slot"]
+    "aws_route53_record.aws-route-slot",
+    "azurerm_app_service.app",
+    "azurerm_app_service.app_slot",
+  ]
 }
 
