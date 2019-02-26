@@ -1,3 +1,7 @@
+
+variable "rg_name" {
+}
+
 variable "sendgrid" {
   type="map"
 }

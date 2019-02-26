@@ -14,7 +14,7 @@ data "template_file" "send_grid" {
 
 resource "azurerm_template_deployment" "sendgrid" {
   name = "${var.location}-arm-sg-${var.prefix_rs}-${var.channel_g}"
-  resource_group_name = "${azurerm_resource_group.rg.name}"
+  resource_group_name = "${var.rg_name}"
   deployment_mode = "Incremental"
   template_body = "${data.template_file.send_grid.rendered}"
 }
