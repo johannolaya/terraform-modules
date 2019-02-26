@@ -2,7 +2,7 @@ data "template_file" "send_grid" {
   template = "${file("sendgrid.json")}"
 
   vars {
-    location = "${azurerm_resource_group.rg.location}"
+    location = "${var.location}"
     sendgrid_account_name = "${var.location}-sg-${var.prefix_rs}-${var.channel_g}"
     sendgrid_account_password = "${var.sendgrid["password"]}"
     sendgrid_contact_firstName = "${var.sendgrid["first_name"]}"
