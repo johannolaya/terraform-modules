@@ -24,6 +24,7 @@ resource "azurerm_app_service" "app" {
   app_service_plan_id = "${azurerm_app_service_plan.sp.id}"
 
   site_config {
+    min_tls_version = "${var.app_tls_version}"
     dotnet_framework_version = "v4.0"
     scm_type = "LocalGit"
     always_on = true
@@ -82,6 +83,7 @@ resource "azurerm_app_service_slot" "app_slot" {
   app_service_plan_id = "${azurerm_app_service_plan.sp.id}"
 
   site_config {
+    min_tls_version = "${var.app_tls_version}"
     scm_type = "LocalGit"
     always_on = true
   }

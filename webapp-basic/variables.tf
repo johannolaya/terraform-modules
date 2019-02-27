@@ -24,6 +24,8 @@ variable "app_settings_slot" {
   type = "map"
 }
 
+variable "app_tls_version" {
+}
 
 variable "connection_01" {
   default = {
