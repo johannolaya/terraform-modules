@@ -27,6 +27,10 @@ variable "app_settings_slot" {
 variable "app_tls_version" {
 }
 
+variable "app_insights_name" {
+  default="automationManagerAppInsightsInstrumentationKey"
+}
+
 variable "connection_01" {
   default = {
     name = "DefaultDatabase"
