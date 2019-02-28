@@ -33,6 +33,7 @@
     resource_group_name = "${var.rg_name}"
     location = "${var.location}"
     server_name = "${azurerm_sql_server.sdb.name}"
+    requested_service_objective_name = "${var.db_size}"
     depends_on = [
       "azurerm_sql_server.sdb"]
   }
@@ -41,6 +42,7 @@
     resource_group_name = "${var.rg_name}"
     location = "${var.location}"
     server_name = "${azurerm_sql_server.sdb.name}"
+    requested_service_objective_name = "${var.db_size_slot}"
     depends_on = [
       "azurerm_sql_server.sdb"]
   }
