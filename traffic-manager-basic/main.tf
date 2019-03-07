@@ -23,17 +23,15 @@ resource "azurerm_traffic_manager_profile" "traffic_manager_profile" {
 }
 
 resource "azurerm_traffic_manager_endpoint" "traffic_manager_endpoint" {
-  #name                = "${lookup(element(var.tm_apps,count.index%length(var.tm_apps)), "app_name")}"
   count               = "${length(var.tm_apps)}"
   name                = "${lookup(var.tm_apps[count.index], "app_name")}"
   resource_group_name = "${var.rg_name}"
   profile_name        = "${azurerm_traffic_manager_profile.traffic_manager_profile.name}"
-  #target_resource_id  = "${lookup(element(var.tm_apps,count.index%length(var.tm_apps)), "app_id")}"
   target_resource_id  = "${lookup(var.tm_apps[count.index], "app_id")}"
   type                = "azureEndpoints"
   weight              = 1
   priority            = 1
-  endpoint_location = "${var.location}"
+  endpoint_location   = "${lookup(var.tm_apps[count.index], "app_location")}"
 }
 
 resource "aws_route53_record" "aws-route" {
