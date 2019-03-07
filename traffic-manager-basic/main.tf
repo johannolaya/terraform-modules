@@ -4,7 +4,7 @@ data "aws_route53_zone" "domain" {
 }
 
 resource "azurerm_traffic_manager_profile" "traffic_manager_profile" {
-  name                = "${var.tm_name}"
+  name                = "traffic${var.tm_name}"
   resource_group_name = "${var.rg_name}"
 
   traffic_routing_method = "${var.tm_routing_method}"
@@ -36,7 +36,7 @@ resource "azurerm_traffic_manager_endpoint" "traffic_manager_endpoint" {
 
 resource "aws_route53_record" "aws-route" {
   zone_id = "${data.aws_route53_zone.domain.zone_id}"
-  name = "${var.app_dns}.${data.aws_route53_zone.domain.name}"
+  name = "${var.tm_app_dns}.${data.aws_route53_zone.domain.name}"
   type = "${var.aws_type}"
   ttl = "${var.aws_ttl}"
   records = [
