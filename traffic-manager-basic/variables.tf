@@ -14,11 +14,11 @@ variable "aws_zone_id" {
 
 }
 
-varaible "aws_type" {
+variable "aws_type" {
 
 }
 
-varaible "aws_ttl" { }
+variable "aws_ttl" { }
 
 variable "tm_name" {}
 
