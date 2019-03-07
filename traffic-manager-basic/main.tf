@@ -30,7 +30,7 @@ resource "azurerm_traffic_manager_endpoint" "traffic_manager_endpoint" {
   target_resource_id  = "${lookup(var.tm_apps[count.index], "app_id")}"
   type                = "azureEndpoints"
   weight              = 1
-  priority            = "${count.index}"
+  priority            = "${count.index + 1}"
   endpoint_location   = "${lookup(var.tm_apps[count.index], "app_location")}"
 }
 
