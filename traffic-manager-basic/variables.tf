@@ -26,6 +26,10 @@ variable "tm_routing_method" {
   default="Performance"
 }
 
+variable "tm_apps_count" {
+  default="3"
+}
+
 variable "tm_ttl" {
   default=300
 }

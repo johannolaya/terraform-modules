@@ -23,7 +23,7 @@ resource "azurerm_traffic_manager_profile" "traffic_manager_profile" {
 }
 
 resource "azurerm_traffic_manager_endpoint" "traffic_manager_endpoint" {
-  count               = "${length(var.tm_apps)}"
+  count               = "${length(var.tm_apps_count)}"
   name                = "${lookup(var.tm_apps[count.index], "app_name")}"
   resource_group_name = "${var.rg_name}"
   profile_name        = "${azurerm_traffic_manager_profile.traffic_manager_profile.name}"
