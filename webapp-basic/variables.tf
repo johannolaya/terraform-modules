@@ -31,6 +31,10 @@ variable "app_insights_name" {
   default="automationManagerAppInsightsInstrumentationKey"
 }
 
+variable "app_insights_location" {
+  default="eastus"
+}
+
 variable "connection_01" {
   default = {
     name = "DefaultDatabase"

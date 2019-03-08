@@ -1,3 +1,9 @@
+output "sdb_name" {
+  value = "${azurerm_sql_server.sdb.name}"
+  depends_on = [
+    "azurerm_sql_server.sdb"]
+}
+
 output "db_name" {
   value = "${azurerm_sql_database.db.name}"
   depends_on = [

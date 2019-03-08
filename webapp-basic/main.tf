@@ -11,7 +11,7 @@ resource "azurerm_app_service_plan" "sp" {
 
 resource "azurerm_application_insights" "app_insights" {
   name = "${var.location}-ins-${var.prefix_rs}-${var.channel_g}"
-  location = "${var.location}"
+  location = "${var.app_insights_location}"
   resource_group_name = "${var.rg_name}"
   application_type = "Web"
 }
