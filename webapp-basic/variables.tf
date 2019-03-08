@@ -35,6 +35,11 @@ variable "app_insights_location" {
   default="eastus"
 }
 
+variable "app_default_documents" {
+  type="list"
+  default=[]
+}
+
 variable "connection_01" {
   default = {
     name = "DefaultDatabase"

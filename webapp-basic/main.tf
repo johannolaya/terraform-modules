@@ -28,6 +28,7 @@ resource "azurerm_app_service" "app" {
     dotnet_framework_version = "v4.0"
     scm_type = "LocalGit"
     always_on = true
+    default_documents = "${var.app_default_documents}"
   }
 
   app_settings = "${merge(
@@ -86,6 +87,7 @@ resource "azurerm_app_service_slot" "app_slot" {
     min_tls_version = "${var.app_tls_version}"
     scm_type = "LocalGit"
     always_on = true
+    default_documents = "${var.app_default_documents}"
   }
 
   app_settings = "${merge(
