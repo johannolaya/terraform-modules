@@ -15,9 +15,9 @@ resource "azurerm_cdn_endpoint" "cdn_ep" {
 
   origin {
     name      = "${var.location}-ori-${var.prefix_rs}-${var.channel_g}"
-    host_name = "${var.app_dns}.${var.domain_biz_aws}"
+    host_name = "${var.app_dns}.${var.aws_domain_bizagi}"
   }
-  origin_host_header = "${var.app_dns}.${var.domain_biz_aws}"
+  origin_host_header = "${var.app_dns}.${var.aws_domain_bizagi}"
 }
 
 resource "azurerm_cdn_endpoint" "cdn_ep_slot" {
@@ -30,7 +30,7 @@ resource "azurerm_cdn_endpoint" "cdn_ep_slot" {
 
   origin {
     name      = "${var.location}-ori-${var.prefix_rs}-${var.channel_g}-slot"
-    host_name = "${var.app_dns}slot.${var.domain_biz_aws}"
+    host_name = "${var.app_dns}slot.${var.aws_domain_bizagi}"
   }
-  origin_host_header= "${var.app_dns}slot.${var.domain_biz_aws}"
+  origin_host_header= "${var.app_dns}slot.${var.aws_domain_bizagi}"
 }

@@ -25,6 +25,6 @@ variable "content_types_to_compress" {
 variable "app_dns" {
 }
 
-variable "domain_biz_aws" {
+variable "aws_domain_bizagi" {
 }
 
