@@ -28,3 +28,9 @@ variable "app_dns" {
 variable "aws_domain_bizagi" {
 }
 
+variable "origin_host_name" {
+}
+
+variable "origin_host_header" {
+}
+
