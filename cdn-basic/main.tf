@@ -30,7 +30,7 @@ resource "azurerm_cdn_endpoint" "cdn_ep_slot" {
 
   origin {
     name      = "${var.location}-ori-${var.prefix_rs}-${var.channel_g}-slot"
-    host_name = "${var.origin_host_name}"
+    host_name = "${var.origin_host_name_slot}"
   }
-  origin_host_header= "${var.origin_host_header}"
+  origin_host_header= "${var.origin_host_header_slot}"
 }

@@ -34,3 +34,8 @@ variable "origin_host_name" {
 variable "origin_host_header" {
 }
 
+variable "origin_host_name_slot" {
+}
+
+variable "origin_host_header_slot" {
+}
