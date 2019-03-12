@@ -1,5 +1,5 @@
  locals {
-  local_db_name = "${var.db_name != "" ? var.db_name : ${var.prefix_rs}-db-${var.channel_g}"
+  local_db_name = "${var.db_name != "" ? var.db_name : "${var.prefix_rs}-db-${var.channel_g}"}"
 }
  
  resource "azurerm_sql_server" "sdb" {
