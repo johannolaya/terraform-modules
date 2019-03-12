@@ -1,3 +1,7 @@
+ locals {
+  local_db_name = "${var.db_name != "" ? var.db_name : ${var.prefix_rs}-db-${var.channel_g}"
+}
+ 
  resource "azurerm_sql_server" "sdb" {
     name = "${var.location}-sdb-${var.prefix_rs}-${var.channel_g}"
     resource_group_name = "${var.rg_name}"
@@ -29,7 +33,7 @@
  }
 
   resource "azurerm_sql_database" "db" {
-    name = "${var.prefix_rs}-db-${var.channel_g}"
+    name = "${local.local_db_name}"
     resource_group_name = "${var.rg_name}"
     location = "${var.location}"
     server_name = "${azurerm_sql_server.sdb.name}"
@@ -38,7 +42,7 @@
       "azurerm_sql_server.sdb"]
   }
   resource "azurerm_sql_database" "db_slot" {
-    name = "${var.prefix_rs}-db-${var.channel_g}-slot"
+    name = "${local.local_db_name}-slot"
     resource_group_name = "${var.rg_name}"
     location = "${var.location}"
     server_name = "${azurerm_sql_server.sdb.name}"
