@@ -1,3 +1,7 @@
+locals{
+  local_app_insights_name_02 = "${var.app_insights_name_02 == "" ? var.app_insights_name : var.app_insights_name_02 }"
+}
+
 resource "azurerm_app_service_plan" "sp" {
   name = "${var.location}-sp-${var.prefix_rs}-${var.channel_g}"
   location = "${var.location}"
@@ -34,7 +38,7 @@ resource "azurerm_app_service" "app" {
   app_settings = "${merge(
     map("APPINSIGHTS_INSTRUMENTATIONKEY",local.app_instrumentation_key),
     map(var.app_insights_name ,local.app_instrumentation_key),
-    map(var.app_insights_name_02 ,local.app_instrumentation_key),    
+    map(local.local_app_insights_name_02 ,local.app_instrumentation_key),    
     var.app_settings)}"
 
   connection_string {

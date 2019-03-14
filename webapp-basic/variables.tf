@@ -32,7 +32,7 @@ variable "app_insights_name" {
 }
 
 variable "app_insights_name_02" {
-  default="automationManagerAppInsightsInstrumentationKey"
+  default=""
 }
 
 variable "app_insights_location" {
