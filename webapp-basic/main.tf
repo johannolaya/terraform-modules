@@ -47,7 +47,7 @@ resource "azurerm_app_service" "app" {
   app_settings = "${merge(
     map("APPINSIGHTS_INSTRUMENTATIONKEY",local.app_instrumentation_key),
     map(var.app_insights_name ,local.app_instrumentation_key),
-    map("${null_resource.app_insights_setting.*.triggers.setting_name}","${null_resource.app_insights_setting.*.triggers.value}"),
+    "${null_resource.app_insights_setting.*.triggers}",
     var.app_settings)}"
 
   connection_string {
