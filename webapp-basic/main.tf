@@ -5,7 +5,7 @@ locals {
 resource "null_resource" "app_insights_setting" {
   count = "${length(var.app_insights_names)}"
 
-  rowsl {
+  triggers {
     setting_name     = "${element(var.app_insights_names, count.index)}"
     value = "${local.app_instrumentation_key}"
   }
@@ -47,7 +47,7 @@ resource "azurerm_app_service" "app" {
   app_settings = "${merge(
     map("APPINSIGHTS_INSTRUMENTATIONKEY",local.app_instrumentation_key),
     map(var.app_insights_name ,local.app_instrumentation_key),
-    map("${null_resource.app_insights_setting.*.setting_name}",local.app_instrumentation_key),
+    "${null_resource.app_insights_setting.*.triggers}",
     var.app_settings)}"
 
   connection_string {
