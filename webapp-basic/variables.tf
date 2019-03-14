@@ -31,6 +31,11 @@ variable "app_insights_name" {
   default="automationManagerAppInsightsInstrumentationKey"
 }
 
+variable "app_insights_names" {
+  type="list"
+  default=[]
+}
+
 variable "app_insights_location" {
   default="eastus"
 }

@@ -1,3 +1,16 @@
+locals {
+  app_instrumentation_key = "${azurerm_application_insights.app_insights.instrumentation_key}"
+}
+
+resource "null_resource" "app_insights_setting" {
+  count = "${length(var.app_insights_names)}"
+
+  names {
+    setting_name     = "${element(var.app_insights_names, count.index)}"
+    value = "${local.app_instrumentation_key}"
+  }
+}
+
 resource "azurerm_app_service_plan" "sp" {
   name = "${var.location}-sp-${var.prefix_rs}-${var.channel_g}"
   location = "${var.location}"
@@ -34,6 +47,7 @@ resource "azurerm_app_service" "app" {
   app_settings = "${merge(
     map("APPINSIGHTS_INSTRUMENTATIONKEY",local.app_instrumentation_key),
     map(var.app_insights_name ,local.app_instrumentation_key),
+    "${null_resource.app_insights_setting.*.names}",
     var.app_settings)}"
 
   connection_string {
@@ -135,7 +149,4 @@ resource "azurerm_app_service_slot" "app_slot" {
 
 }
 
-locals {
-  app_instrumentation_key = "${azurerm_application_insights.app_insights.instrumentation_key}"
-}
 
