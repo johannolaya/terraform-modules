@@ -31,9 +31,8 @@ variable "app_insights_name" {
   default="automationManagerAppInsightsInstrumentationKey"
 }
 
-variable "app_insights_names" {
-  type="list"
-  default=[]
+variable "app_insights_name_02" {
+  default="automationManagerAppInsightsInstrumentationKey"
 }
 
 variable "app_insights_location" {
@@ -154,4 +153,3 @@ variable "connection_slot_06" {
   }
   type= "map"
 }
-
