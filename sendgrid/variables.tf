@@ -14,3 +14,7 @@ variable "prefix_rs" {
 
 variable "channel_g" {
 }
+
+variable "sendgrid_name"{
+  default=""
+}

@@ -1,9 +1,13 @@
+locals{
+  local_sendgrid_name = "${var.sendgrid_name != "" ? var.sendgrid_name : "${var.location}-sg-${var.prefix_rs}-${var.channel_g}"}"
+}
+
 data "template_file" "send_grid" {
   template = "${file("sendgrid.json")}"
 
   vars {
     location = "${var.location}"
-    sendgrid_account_name = "${var.location}-sg-${var.prefix_rs}-${var.channel_g}"
+    sendgrid_account_name = "${local.local_sendgrid_name}"
     sendgrid_account_password = "${var.sendgrid["password"]}"
     sendgrid_contact_firstName = "${var.sendgrid["first_name"]}"
     sendgrid_contact_lastName = "${var.sendgrid["last_name"]}"
